@@ -5,135 +5,213 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ifenna Daniel | Global Business Adviser</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Professional Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+    }
+    .loading-text {
+      font-family: 'Playfair Display', serif;
+    }
+    .africa-icon {
+      width: 36px;
+      height: 36px;
+      margin-left: 8px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    img {
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-  <!-- Header / Navbar -->
-  <header class="bg-white shadow-sm">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold">Ifenna Daniel</a>
-      <nav>
-        <a href="#about" class="mx-3 hover:underline">About</a>
-        <a href="#projects" class="mx-3 hover:underline">Projects</a>
-        <a href="#services" class="mx-3 hover:underline">Services</a>
-        <a href="#contact" class="mx-3 hover:underline">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Loading Screen -->
+  <div id="loader" class="flex flex-col items-center justify-center h-screen bg-white">
+    <h1 id="loading-text" class="loading-text text-4xl text-gray-800 flex items-center">
+      <span id="typed-text"></span>
+      <svg class="africa-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512" stroke="black" stroke-width="16">
+        <path d="M256 32C132.3 32 32 132.3 32 256s100.3 224 224 224 224-100.3 224-224S379.7 32 256 32zm0 64c88.2 0 160 71.8 160 160s-71.8 160-160 160S96 344.2 96 256 167.8 96 256 96z"/>
+      </svg>
+    </h1>
+  </div>
 
-  <!-- Hero Banner -->
-  <section class="bg-gray-100 py-20">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-      <div class="md:w-2/3 text-center md:text-left">
-        <h1 class="text-5xl font-extrabold">Global Business Adviser & Data Strategist</h1>
-        <p class="mt-4 text-xl max-w-lg">I support African and global businesses to scale with clarity using data-driven strategies, digital transformation, and market intelligence.</p>
-        <a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Connect with Me</a>
+  <!-- Main Site Content -->
+  <div id="main-content" class="hidden">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold">Ifenna Daniel</a>
+        <nav>
+          <a href="#about" class="mx-3 hover:underline">About</a>
+          <a href="#projects" class="mx-3 hover:underline">Projects</a>
+          <a href="#services" class="mx-3 hover:underline">Services</a>
+          <a href="#publications" class="mx-3 hover:underline">Publications</a>
+          <a href="#contact" class="mx-3 hover:underline">Contact</a>
+        </nav>
       </div>
-      <img src="images/profile 1.jpg" alt="Ifenna Daniel" class="mt-10 md:mt-0 md:w-1/3 rounded-full shadow-lg">
-    </div>
-  </section>
+    </header>
 
- <!-- About Section -->
-  <section id="about" class="py-16 bg-white">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-      <p class="text-lg leading-relaxed">
-        To my ambitious entrepreneurs, growing businesses, and global-minded professionals, I see you. You're building bold ideas, navigating complex markets, and looking for clarity in a world of noise.
-      </p>
-      <p class="mt-4 text-lg leading-relaxed">
-        I’m <strong>Daniel Ifenna</strong>, a <strong>Global Business Adviser and Data Strategist</strong> with a passion for turning complexity into clarity and insight into growth. My analytics journey began at the <strong>National Institute of Information Technology (NIIT) Abuja</strong>, where I built a strong foundation in data interpretation and strategic thinking.
-      </p>
-      <p class="mt-4 text-lg leading-relaxed">
-        My professional edge was sharpened through advanced training with <strong>IBM</strong>, which deepened my ability to solve complex business problems and elevate decision-making with a data-informed lens.
-      </p>
-      <p class="mt-4 text-lg leading-relaxed">
-        As a proud graduate of <strong>Covenant University</strong>, and with a <strong>qualification in stakeholder management</strong>, I understand how to connect business goals with human priorities because meaningful progress happens when strategy, data, and people align.
-      </p>
-      <p class="mt-4 text-lg leading-relaxed">
-        Unlike generic consultants, I bring a <strong>story-first approach</strong> rooted in personal experience, enriched by business intelligence, and shaped by a commitment to real-world impact. Whether you’re scaling a local venture or navigating global markets, I help you move with clarity, purpose, and measurable results.
-      </p>
-      <blockquote class="mt-6 italic border-l-4 border-blue-600 pl-4">“Your business runs on what you know not just how much you hold.”</blockquote>
-      <p class="mt-4 text-lg leading-relaxed">
-        I envision a world where businesses of all sizes regardless of geography can access the tools, insights, and frameworks needed to thrive sustainably. My mission is to support the next generation of enterprises in building lasting impact, not just within their local contexts, but on the global stage.
-      </p>
-    </div>
-  </section>
-
-
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-12 px-6 bg-gray-80">
-    <h2 class="text-3xl font-semibold text-center text-black-900 mb-8">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-      <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
-        <h3 class="text-lg font-bold mb-2">Global-Retail Sales Analysis</h3>
-        <p>This report delivers a comprehensive analysis of the weekly sales across 45+ stores, highlighting key performance drivers including seasonality, markdown effectiveness, and macroeconomic influence on retail performance for Konga-gro Mart</p>
-        <a href="https://daniel-ifenna.github.io/Retail-sales-analysis/" class="text-blue-600 underline text-sm">View Project</a>
-      </div>
-      <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
-        <h3 class="text-lg font-bold mb-2">Bank Customer Churn Analysis & Prediction</h3>
-        <p>Machine learning model to predict and reduce bank customer churn.</p>
-        <a href="https://daniel-ifenna.github.io/Bank-customer-churn-analysis/" class="text-blue-600 underline text-sm">View Project</a>
-      </div>
-      <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
-        <h3 class="text-lg font-bold mb-2">HR Attrition Analytics</h3>
-        <p>This project presents a comprehensive HR Attrition Analysis for Palo Technology Limited, conducted using Power BI and advanced data modeling techniques.</p>
-        <a href="https://daniel-ifenna.github.io/HR-Attrition-Analytics/" class="text-blue-600 underline text-sm">View Project</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-3xl font-bold mb-6 text-center">Advisory Services</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">Analytics & Data Strategy Consulting</h3>
-          <p>Guiding organizations in aligning data practices with business goals to drive meaningful insights and strategic clarity.</p>
+    <!-- Hero Banner -->
+    <section class="bg-gray-100 py-20">
+      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+        <div class="md:w-2/3 text-center md:text-left">
+          <h1 class="text-5xl font-extrabold">Global Business Adviser & Data Strategist</h1>
+          <p class="mt-4 text-xl max-w-lg">I support African and global businesses to scale with clarity using data-driven strategies, digital transformation, and market intelligence.</p>
+          <a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Connect with Me</a>
         </div>
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">Predictive Modeling</h3>
-          <p>Designing models that anticipate trends, forecast outcomes, and empower proactive decision-making.</p>
+        <img src="images/profile 1.jpg" alt="Ifenna Daniel" class="mt-10 md:mt-0 md:w-1/3 rounded-full shadow-lg">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+        <p class="text-lg leading-relaxed">To my ambitious entrepreneurs, growing businesses, and global-minded professionals — I see you. You’re building bold ideas, navigating complex markets, and searching for clarity in a world full of noise.</p>
+        <p class="mt-4 text-lg leading-relaxed">I’m <strong>Daniel Ifenna</strong>, a <strong>Global Business Adviser, Data Strategist, and Public Speaker</strong> with a passion for turning complexity into clarity and insight into growth. My journey began at the <strong>National Institute of Information Technology (NIIT) Abuja)</strong>, where I built a strong foundation in data interpretation and strategic thinking.</p>
+        <p class="mt-4 text-lg leading-relaxed">My professional edge was sharpened through advanced training with <strong>IBM</strong>, where I deepened my ability to solve complex business problems and elevate decision-making with a data-informed lens. As a proud graduate of <strong>Covenant University</strong>, with a qualification in <strong>stakeholder management</strong>, I’ve learned how to connect business goals with human priorities — because meaningful progress happens when <strong>strategy, people, and data</strong> align.</p>
+        <p class="mt-4 text-lg leading-relaxed">Unlike generic consultants, I bring a <strong>story-first approach</strong>, rooted in personal experience, enriched by rigorous research, and shaped by a commitment to real-world impact. Whether I’m advising on <strong>international development initiatives</strong>, crafting <strong>business growth strategies</strong>, conducting <strong>data-driven research</strong>, or engaging audiences through <strong>public speaking</strong>, my focus is on helping leaders and organizations move with clarity, purpose, and measurable results.</p>
+        <blockquote class="mt-6 italic border-l-4 border-blue-600 pl-4">“Your business runs on what you know — not just what you hold.”</blockquote>
+        <p class="mt-4 text-lg leading-relaxed">I envision a world where businesses of all sizes, regardless of geography, can access the <strong>tools, insights, and frameworks</strong> needed to thrive sustainably. My mission is to support the next generation of enterprises in building lasting impact — not just within their local contexts, but on the global stage.</p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 px-6 bg-gray-80">
+      <h2 class="text-3xl font-semibold text-center text-black-900 mb-8">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-lg font-bold mb-2">Global-Retail Sales Analysis</h3>
+          <p>This report delivers a comprehensive analysis of the weekly sales across 45+ stores, highlighting key performance drivers including seasonality, markdown effectiveness, and macroeconomic influence on retail performance for Konga-gro Mart</p>
+          <a href="https://daniel-ifenna.github.io/Retail-sales-analysis/" class="text-blue-600 underline text-sm">View Project</a>
         </div>
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">Executive Dashboards & Reporting</h3>
-          <p>Creating dynamic dashboards that deliver timely, actionable business insights to executives and stakeholders.</p>
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-lg font-bold mb-2">Bank Customer Churn Analysis & Prediction</h3>
+          <p>Machine learning model to predict and reduce bank customer churn.</p>
+          <a href="https://daniel-ifenna.github.io/Bank-customer-churn-analysis/" class="text-blue-600 underline text-sm">View Project</a>
         </div>
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">Data Quality & Governance</h3>
-          <p>Helping businesses ensure reliable data practices, compliance, and integrity across their data ecosystems.</p>
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-lg font-bold mb-2">HR Attrition Analytics</h3>
+          <p>This project presents a comprehensive HR Attrition Analysis for Palo Technology Limited, conducted using Power BI and advanced data modeling techniques.</p>
+          <a href="https://daniel-ifenna.github.io/HR-Attrition-Analytics/" class="text-blue-600 underline text-sm">View Project</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Insights / Blog -->
-  <section id="insights" class="py-16 bg-gray-100 px-6">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold text-center mb-6">Insights & Tools</h2>
-      <div class="space-y-6">
-        <article class="bg-white p-6 rounded shadow">
-          <h3 class="text-xl font-bold mb-2">How Data Can Rescue African Retail</h3>
-          <p class="mb-2">Strategies I used to turn raw sales data into growth signals for retail clients.</p>
-          <a href="#" class="text-blue-600 hover:underline">Read More</a>
-        </article>
-        <article class="bg-white p-6 rounded shadow">
-          <h3 class="text-xl font-bold mb-2">Building a Culture of Analytics</h3>
-          <p class="mb-2">Key lessons from training programs with mid-sized businesses in West Africa.</p>
-          <a href="#" class="text-blue-600 hover:underline">Read More</a>
-        </article>
+    <!-- Refined Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6 text-center">Advisory Services</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white shadow p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">Analytics & Data Strategy Consulting</h3>
+            <p>Helping organizations leverage data to drive strategic decisions, optimize operations, and unlock sustainable growth opportunities.</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">International Development & Policy Advisory</h3>
+            <p>Guiding governments, NGOs, and enterprises in designing impactful programs, policies, and initiatives that foster growth and social impact.</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">Business Strategy & Transformation</h3>
+            <p>Crafting actionable strategies that align business vision with operational execution, enabling companies to scale locally and globally.</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">Predictive Modeling & Research</h3>
+            <p>Developing data-driven models and conducting research to anticipate market trends, evaluate risks, and generate actionable insights.</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">Public Speaking & Thought Leadership</h3>
+            <p>Engaging audiences through conferences, webinars, and workshops to inspire leadership and share global business expertise.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <footer id="contact" class="bg-white py-12 text-center px-6">
-    <h2 class="text-2xl font-semibold mb-2">Get in Touch</h2>
-    <p class="mb-4">Let’s build something meaningful together. I’m always open to consulting, partnerships, and workshops.</p>
-    <p class="mb-1">Email: <a href="mailto:daniel.ifenna.daniel@gmail.com" class="text-blue-600 hover:underline">daniel.ifenna.daniel@gmail.com</a></p>
-    <p class="mb-1">LinkedIn: <a href="https://linkedin.com/in/ifenna-daniel-4a916223a" class="text-blue-600 hover:underline">/ifenna-daniel</a></p>
-    <p>&copy; 2025 Ifenna Daniel. All rights reserved.</p>
-  </footer>
+    <!-- Publications Section with JPEG Uploads -->
+    <section id="publications" class="py-16 px-6 md:px-12 bg-white">
+      <h2 class="text-3xl font-semibold mb-10 text-center text-blue-900">Publications</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition">
+          <img src="images/pub1.jpg" alt="Publication 1" class="rounded-t-2xl w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">The Kaizen Way</h3>
+            <p class="text-sm mb-4 text-gray-600">"The Kaizen Way," describes a philosophy of continuous improvement rooted in the Japanese concept of Kaizen (meaning "change for the better"). The work advocates for achieving significant, long-lasting effects in personal and professional life by making small, regular efforts and gradual progress rather than striving for immediate, drastic changes.</p>
+            <a href="https://medium.com/@globaladviser/the-kaizen-way-d939368a4639" target="_blank" class="text-blue-600 hover:underline">Read More</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition">
+          <img src="images/pub2.jpg" alt="Publication 2" class="rounded-t-2xl w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Publication Title 2</h3>
+            <p class="text-sm mb-4 text-gray-600">Short description of the publication. Professional insights and global relevance.</p>
+            <a href="https://medium.com" target="_blank" class="text-blue-600 hover:underline">Read More</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition">
+          <img src="images/pub3.jpg" alt="Publication 3" class="rounded-t-2xl w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Publication Title 3</h3>
+            <p class="text-sm mb-4 text-gray-600">Short description of the publication. Professional insights and global relevance.</p>
+            <a href="https://medium.com" target="_blank" class="text-blue-600 hover:underline">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <footer id="contact" class="bg-white py-12 text-center px-6">
+      <h2 class="text-2xl font-semibold mb-2">Get in Touch</h2>
+      <p class="mb-4">Let’s build something meaningful together. I’m always open to consulting, partnerships, and workshops.</p>
+      <p class="mb-1">Email: <a href="mailto:daniel.ifenna.daniel@gmail.com" class="text-blue-600 hover:underline">daniel.ifenna.daniel@gmail.com</a></p>
+      <p class="mb-1">LinkedIn: <a href="https://linkedin.com/in/ifenna-daniel-4a916223a" class="text-blue-600 hover:underline">/ifenna-daniel</a></p>
+      <p>&copy; 2025 Ifenna Daniel. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- Loader Script -->
+  <script>
+    const messages = ["Welcome"];
+    let msgIndex = 0;
+    let charIndex = 0;
+    const speed = 120;
+    const typedText = document.getElementById("typed-text");
+
+    function typeWriter() {
+      if (msgIndex >= messages.length) {
+        setTimeout(() => {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("main-content").classList.remove("hidden");
+        }, 800);
+        return;
+      }
+
+      const currentMessage = messages[msgIndex];
+      if (charIndex < currentMessage.length) {
+        typedText.textContent += currentMessage.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, speed);
+      } else {
+        charIndex = 0;
+        msgIndex++;
+        typedText.textContent = "";
+        setTimeout(typeWriter, speed + 200);
+      }
+    }
+
+    window.addEventListener("load", typeWriter);
+  </script>
 
 </body>
 </html>
